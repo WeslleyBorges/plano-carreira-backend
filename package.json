@@ -1,0 +1,19 @@
+{
+  "name": "plano-carreira-backend",
+  "version": "1.0.0",
+  "description": "Esta aplicação tem a finalidade de gerenciar os funcionários, seus cargos, salários e seus históricos de progresso dentro da corporação",
+  "main": "index.js",
+  "author": "Super Ensino Development Team",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.13",
+    "node-restful": "^0.2.6"
+  }
+}
