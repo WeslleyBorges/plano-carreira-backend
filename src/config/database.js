@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
 
-const DATABASE_URI = process.env.MLAB_URI || 'mongodb://localhost/plano-carreira'
+const DATABASE_URI = process.env.MONGODB_URI || 'mongodb://localhost/plano-carreira'
 
 mongoose.connect(DATABASE_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
