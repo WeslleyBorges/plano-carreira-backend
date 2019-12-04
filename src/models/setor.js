@@ -6,8 +6,10 @@ const setorSchema = new mongoose.Schema({
   descricao: { type: String, required: false }
 }, {
   versionKey: false,
-  timestamps: true,
-  autoCreate: true
+  timestamps: true
 })
 
-module.exports = restful.model('setores', setorSchema)
+module.exports = { 
+  model: restful.model('setor', setorSchema),
+  schema: setorSchema
+}

@@ -1,7 +1,6 @@
-const setor = require('../models/setor')
+const setorModel = require('../models/setor').model
 
-setor.methods(['GET', 'POST', 'PUT', 'DELETE'])
-
-setor.updateOptions({ new: true, runValidators: true })
+setorModel.methods(['get', 'post', 'put', 'delete'])
+setorModel.updateOptions({ new: true, runValidators: true })
            
-module.exports = setor
+module.exports = setorModel
