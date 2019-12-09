@@ -1,6 +1,6 @@
-const userModel = require('../models/user')
+const user = require('../models/user')
 
-userModel.methods(['get', 'post', 'put', 'delete'])
-userModel.updateOptions({ new: true, runValidators: true })
+user.methods(['get', 'post', 'put', 'delete'])
+user.updateOptions({ new: true, runValidators: true })
 
-module.exports = userService
+module.exports = user
