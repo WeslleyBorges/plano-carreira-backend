@@ -12,4 +12,7 @@ const cargoSchema = new mongoose.Schema({
   timestamps: true
 })
 
-module.exports = restful.model('cargo', cargoSchema)
+module.exports = {
+  model: restful.model('cargo', cargoSchema),
+  schema: cargoSchema
+} 

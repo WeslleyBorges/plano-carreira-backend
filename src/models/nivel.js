@@ -9,4 +9,7 @@ const nivelSchema = new mongoose.Schema({
   timestamps: true
 })
 
-module.exports = restful.model('nivel', nivelSchema)
+module.exports = {
+  model: restful.model('nivel', nivelSchema),
+  schema: nivelSchema
+}
