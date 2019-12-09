@@ -1,4 +1,4 @@
-const cargo = require('../models/cargo')
+const cargo = require('../models/cargo').model
 
 cargo.methods(['get', 'post', 'put', 'delete'])
 cargo.updateOptions({ new: true, runValidators: true })
