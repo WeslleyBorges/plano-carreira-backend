@@ -9,7 +9,9 @@ module.exports = {
             const password = req.req.body.senha
             userSchema.findOne({email:user}).exec((err,login)=>{
             if(login){
+                console.log(login)
                 if(login.senha === password){
+                    console.log("confirmou senha")
                     let token = jwt.sign({ user:login.email },secret,{ expiresIn: '24h' })
                     res.res.json({
                         success:true,
@@ -18,6 +20,7 @@ module.exports = {
                     })
                 }
                 else {
+                    console.log("errou senha")
                     res.res.send({
                         status:405,
                         message:"Usuário ou senha incorreta"
