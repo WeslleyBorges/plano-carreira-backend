@@ -4,6 +4,7 @@ const secret = require('../config/config').secret
 
 module.exports = {
    login: function(res,req){
+            console.log(req.req.body)
             const user = req.req.body.user
             const password = req.req.body.senha
             userSchema.findOne({email:user}).exec((err,login)=>{
