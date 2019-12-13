@@ -17,7 +17,7 @@ module.exports = {
                 if(login.senha === password){
                     console.log("confirmou senha")
                     let token = jwt.sign({ user:login.email },secret,{ expiresIn: '24h' })
-                    res.res.json({
+                    return res.res.json({
                         success:true,
                         message:"Autenticação sucedida",
                         token: token
@@ -25,14 +25,14 @@ module.exports = {
                 }
                 else {
                     console.log("errou senha")
-                    res.res.send({
+                    return res.res.send({
                         status:405,
                         message:"Usuário ou senha incorreta"
                     })
                 }
             }
             else {
-                res.res.send({
+                return res.res.send({
                 status:405,
                 message:"Usuário ou senha incorreta"
                 })
