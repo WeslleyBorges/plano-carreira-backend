@@ -7,7 +7,7 @@ module.exports = {
             console.log(req.req.body)
             const user = req.req.body.user
             const password = req.req.body.senha
-            userSchema.findOne({email:user}).exec((err,login)=>{
+            userSchema.find({email:user}).exec((err,login)=>{
             if(login){
                 if(err){
                     console.log(err)
