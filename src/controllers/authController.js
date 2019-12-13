@@ -6,6 +6,7 @@ module.exports = {
    login: function(res,req){
             console.log(req.req.body)
             const user = req.req.body.user
+            console.log(user)
             const password = req.req.body.senha
             userSchema.find({email:user}).exec((err,login)=>{
             if(login){
