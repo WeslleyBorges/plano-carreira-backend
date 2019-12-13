@@ -9,6 +9,9 @@ module.exports = {
             const password = req.req.body.senha
             userSchema.findOne({email:user}).exec((err,login)=>{
             if(login){
+                if(err){
+                    console.log(err)
+                }
                 console.log(login)
                 if(login.senha === password){
                     console.log("confirmou senha")
