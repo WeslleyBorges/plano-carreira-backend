@@ -14,7 +14,7 @@ module.exports = server => {
   const router = express.Router()
   const services = express.Router()
   
-  server.use('/api', router)
+  server.use('/auth', router)
   server.use('/api', services)
   services.use(checkToken)
 

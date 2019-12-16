@@ -2,8 +2,6 @@ let JWT = require('jsonwebtoken')
 const config = require('../config/config')
 
 let checkToken = (req, res, next)=>{
-    console.log(req.headers)
-    console.log("entrei aqui")
     let token = req.headers['x-access-token'] || req.headers['authorization']
     if(token){
         if (token.startsWith('Bearer ')) {
