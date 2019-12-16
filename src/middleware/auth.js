@@ -2,7 +2,7 @@ let JWT = require('jsonwebtoken')
 const config = require('../config/config')
 
 let checkToken = (req, res, next)=>{
-    let token = req.headers['x-access-token'] || req.headers['authorization']
+    let token = req.headers['x-access-token'] || req.headers['Authorization']
     if(token){
         if (token.startsWith('Bearer ')) {
             // Remove Bearer from string
