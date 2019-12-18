@@ -9,7 +9,6 @@ const cargoNivelService = require('../services/cargoNivelService')
 const checkToken = require('../middleware/auth').checkToken
 const auth = require('../controllers/authController')
 
-
 module.exports = server => {
   const router = express.Router()
   const services = express.Router()

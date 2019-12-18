@@ -4,8 +4,8 @@ const cargo = require('./cargo')
 const nivel = require('./nivel')
 
 const cargoNivelSchema = new mongoose.Schema({
-    cargo: { type: cargo.schema, required: true },
-    nivel: { type: nivel.schema, required: true },
+    cargo: { type: mongoose.Schema.Types.ObjectId, required: true, ref:"cargo" },
+    nivel: { type: mongoose.Schema.Types.ObjectId, required: true, ref:"nivel"},
     salario: { type: Number, required: true }
 }, {
     timestamps: true,

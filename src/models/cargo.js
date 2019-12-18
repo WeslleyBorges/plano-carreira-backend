@@ -5,7 +5,7 @@ const setorSchema = require('./setor').schema
 const cargoSchema = new mongoose.Schema({
   nome: { type: String, required: true },
   descricao: { type: String, required: false },
-  setor: { type: setorSchema, required: true }
+  setor: { type: mongoose.Schema.Types.ObjectId, required: true , ref:"setor"}
   // Adicionar a referência para nível
 }, {
   versionKey: false,
