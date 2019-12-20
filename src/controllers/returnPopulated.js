@@ -8,16 +8,6 @@ module.exports = {
                 res.send(404)
             }
             func.populate(all,pathName,function(err,result){
-                result.map(funcio=>{
-                    if(funcio.cargoNivel===null){
-                        funcio.cargoNivel = {cargo:{nome:'Não Atribuído'},nivel:{nome:"Não Atribuído"}}
-                        return funcio
-                    }else{
-                       funcio.cargoNivel.cargo = funcio.cargoNivel.cargo?funcio.cargoNivel.cargo:{nome:"Não Atribuído"}
-                       funcio.cargoNivel.nivel = funcio.cargoNivel.nivel?funcio.cargoNivel.nivel:{nome:"Não Atribuído"}
-                       return funcio
-                    }
-                })
                 res.json(
                     result
                 )
