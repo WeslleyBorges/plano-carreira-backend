@@ -8,9 +8,9 @@ module.exports = {
                 res.send(404)
             }
             func.populate(all,pathName,function(err,result){
-                res.json({
+                res.json(
                     result
-                })
+                )
                 if(err){
                     res.send(500)
                 }
