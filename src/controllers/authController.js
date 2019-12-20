@@ -12,7 +12,7 @@ module.exports = {
                     console.log(err)
                 }
                 if(login.senha === password){
-                    let token = jwt.sign({ user:login.email },secret,{ expiresIn: '24h' })
+                    let token = jwt.sign({ user:login.email },secret,{ expiresIn: '7d' })
                     return res.res.json({
                         success:true,
                         message:"Autenticação sucedida",
